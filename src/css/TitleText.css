@@ -1,8 +1,8 @@
 .TitleText {
-    font-size: 300%;
     width: -moz-fit-content;
     width: fit-content;
     margin: 0px;
 
-    color: white;
+    color: gold;
+    font-size: max(5vw, 50px);
 }
