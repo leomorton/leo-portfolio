@@ -1,0 +1,16 @@
+.ContactButton {
+    background-color: blueviolet;
+    border: none;
+
+    padding: 10px 20px;
+    margin: auto;
+
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+
+    width: 150px;
+    height: 50px;
+
+    border-radius: 10px;
+}

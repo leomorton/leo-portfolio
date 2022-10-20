@@ -1,13 +1,10 @@
 import './App.css';
-import ProjectThumbnail from './components/ProjectThumbnail.js';
+import PageLayout from './components/PageLayout';
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>Title</h1>
-                <ProjectThumbnail projectName={'Project1'} />
-            </header>
+            <PageLayout />
         </div>
     );
 }
