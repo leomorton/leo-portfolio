@@ -1,0 +1,19 @@
+$primary-color: #6200ff;
+$page-margin: 30px;
+
+.TitleBar {
+    color: $primary-color;
+    font-size: 3rem;
+    margin: $page-margin;
+}
+
+.TitleText {
+    margin: 0px;
+}
+
+.ProjectSection {
+    h2 {
+        margin: 0px;
+    }
+    margin: $page-margin;
+}
