@@ -2,13 +2,42 @@ $primary-color: #6200ff;
 $page-margin: 30px;
 
 .TitleBar {
-    color: $primary-color;
+    color: white;
     font-size: 3rem;
     margin: $page-margin;
 }
 
 .TitleText {
     margin: 0px;
+    font-family: botanika-mono-web, monospace;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.projectRow {
+    height: 100px;
+    margin: 30px 0px;
+    display: flex;
+    font-family: botanika-mono-web, monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+
+    .projectRowText {
+        margin: 0px 10px;
+    }
+
+    .projectTitle {
+        margin: 0px 10px;
+    }
+
+    .clientName {
+        margin: 0px 10px;
+    }
+
+    .projectThumbnail {
+        margin: 0px 10px;
+    }
 }
 
 .ProjectSection {
