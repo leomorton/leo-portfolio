@@ -8,6 +8,7 @@ function ProjectSection({ sectionTitle, projects }) {
     projects.forEach((project) => {
         rows.push(<ProjectRow projectData={project} key={project.key.toString()} />);
     });
+    
     return (
         <div className={styles.ProjectSection}>
             <h2 className={styles.SectionTitle}>{sectionTitle}</h2>
