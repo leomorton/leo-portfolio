@@ -3,20 +3,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    gap: 20px;
-    max-width: 1000px;
+    gap: 10px;
+    max-width: 1800px;
+    position: relative;
 
-
-    font-family: botanika-mono-web, monospace;
-    font-weight: 600;
-    font-style: normal;
     font-size: 60px;
 
     margin: 20px 0px;
+    padding: 0px 20px;
 
-    .projectRowText {
-        margin: auto 0px;
-        font-size: 80px;
+    font-variation-settings: 'wght' 100;
+    transition: font-variation-settings 0.07s ease-in-out;
+    h3 {
+        font-variation-settings: 'wght' 100;
+        transition: font-variation-settings 0.07s ease-in-out;
     }
 
     .projectTitle {
@@ -24,13 +24,75 @@
         font-size: 80px;
     }
 
+    .projectThumbnail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        vertical-align: middle;
+        margin: auto 0px;
+        height: 100px;
+    }
+
+    .projectRowText {
+        margin: auto 0px;
+        font-size: 80px;
+    }
+
+    .projectLine {
+        margin: auto 0px;
+        width: 50px;
+        flex-grow: 10;
+        align-self: baseline;
+        height: 3px;
+        background-color: white;
+    }
+
     .clientName {
         margin: auto 0px;
         font-size: 60px;
     }
 
-    .projectThumbnail {
+    .projectYear {
         margin: auto 0px;
-        height: 100px;
+    }
+}
+
+.projectRow::before {
+    content: '';
+    border-color: white;
+    border-width: 3px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: {
+        top-style: solid;
+        left-style: solid;
+    }
+    pointer-events: none;
+}
+
+.projectRow::after {
+    content: '';
+    border-color: white;
+    border-width: 3px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: {
+        bottom-style: solid;
+        right-style: solid;
+    }
+    pointer-events: none;
+}
+
+.projectRow:hover {
+    // font-style: italic;
+    font-variation-settings: 'wght' 800;
+    h3 {
+        font-variation-settings: 'wght' 800;
     }
 }

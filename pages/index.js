@@ -3,13 +3,12 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import TitleBar from '../components/TitleBar';
 import ProjectSection from '../components/ProjectSection';
-<link rel="stylesheet" href="https://use.typekit.net/ivg0iif.css"></link>;
 
 const professionalProjects = [
-    { key: 1, name: 'PROJECT-1', client: 'client1', imagesrc: '/../public/projects/project1_thumb.png', description: "it's the first project" },
-    { key: 2, name: 'PROJECT-2', client: 'client2', imagesrc: '/../public/projects/project2_thumb.png', description: "it's the second project" },
-    { key: 3, name: 'PROJECT-3', client: 'client3', imagesrc: '/../public/projects/project3_thumb.png', description: "it's the third project" },
-    { key: 4, name: 'PROJECT-4', client: 'client4', imagesrc: '/../public/projects/project4_thumb.png', description: "it's the fourth project" },
+    { key: 1, name: 'PROJECT-1', client: 'client1', imagesrc: '/../public/projects/project1_thumb.png', description: "it's the first project", year: '2020' },
+    { key: 2, name: 'PROJECT-2', client: 'client2', imagesrc: '/../public/projects/project2_thumb.png', description: "it's the second project", year: '2020' },
+    { key: 3, name: 'PROJECT-3', client: 'client3', imagesrc: '/../public/projects/project3_thumb.png', description: "it's the third project", year: '2020' },
+    { key: 4, name: 'PROJECT-4', client: 'client4', imagesrc: '/../public/projects/project4_thumb.png', description: "it's the fourth project", year: '2020' },
 ];
 
 const personalProjects = [
@@ -33,7 +32,7 @@ export default function Home() {
             <main className={styles.main}>
                 <TitleBar />
                 <ProjectSection sectionTitle={'Professional Projects'} projects={professionalProjects} />
-                <ProjectSection sectionTitle={'Personal Projects'} projects={personalProjects} />
+                {/* <ProjectSection sectionTitle={'Personal Projects'} projects={personalProjects} /> */}
             </main>
 
             <footer className={styles.footer}></footer>
