@@ -96,3 +96,69 @@
         font-variation-settings: 'wght' 800;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .projectRow {
+        max-width: 900px;
+
+        .projectTitle {
+            font-size: 65px;
+        }
+
+        .clientName {
+            font-size: 55px;
+        }
+
+        .projectRowText {
+            font-size: 55px;
+        }
+
+        .projectYear {
+            font-size: 65px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .projectRow {
+        max-width: 500px;
+
+        .projectTitle {
+            font-size: 50px;
+        }
+
+        .clientName {
+            font-size: 40px;
+        }
+
+        .projectRowText {
+            font-size: 40px;
+        }
+
+        .projectYear {
+            font-size: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .projectRow {
+        max-width: 300px;
+
+        .projectTitle {
+            font-size: 40px;
+        }
+
+        .clientName {
+            font-size: 30px;
+        }
+
+        .projectRowText {
+            font-size: 30px;
+        }
+
+        .projectYear {
+            font-size: 40px;
+        }
+    }
+}
