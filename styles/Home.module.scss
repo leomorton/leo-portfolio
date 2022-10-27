@@ -3,8 +3,10 @@ $page-margin: 30px;
 
 .TitleBar {
     color: white;
-    font-size: 3rem;
+    font-size: max(4.5vw, 35px);
+    text-align: center;
     margin: $page-margin;
+    white-space: nowrap;
 }
 
 .TitleText {
@@ -18,4 +20,9 @@ $page-margin: 30px;
         margin: 0px;
     }
     margin: $page-margin;
+}
+
+.PageFrame {
+    margin: auto;
+    width: max(60vw, 500px);
 }
