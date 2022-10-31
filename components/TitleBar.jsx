@@ -1,12 +1,7 @@
-import React from 'react'
-import styles from '../styles/Home.module.scss'
+import React from 'react';
 
 function TitleBar() {
-  return (
-      <div className={styles.TitleBar}>
-          <h1 className={styles.TitleText}>LEO MORTON</h1>
-      </div>
-  )
+    return <h1 className="text-9xl">TITLE BAR</h1>;
 }
 
-export default TitleBar
+export default TitleBar;

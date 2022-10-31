@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
 import TitleBar from '../components/TitleBar';
 import ProjectSection from '../components/ProjectSection';
 
@@ -22,22 +21,20 @@ const personalProjects = [
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div className="text-white">
             <Head>
                 <title>Leo Morton</title>
                 <meta name="description" content="Leo Morton's Portfolio" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <div className={styles.PageFrame}>
+            <main>
+                <div className="mx-auto max-w-screen-xl px-10">
                     <TitleBar />
                     <ProjectSection sectionTitle={'Professional Projects'} projects={professionalProjects} />
                     {/* <ProjectSection sectionTitle={'Personal Projects'} projects={personalProjects} /> */}
                 </div>
             </main>
-
-            <footer className={styles.footer}></footer>
         </div>
     );
 }
