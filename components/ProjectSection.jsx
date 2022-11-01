@@ -10,7 +10,7 @@ function ProjectSection({ sectionTitle, projects }) {
 
     return (
         <div>
-            <h2 className="text-2xl">{sectionTitle}</h2>
+            <h2 className="text-xl lg:text-2xl">{sectionTitle}</h2>
             <div>{rows}</div>
         </div>
     );

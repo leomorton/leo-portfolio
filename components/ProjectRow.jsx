@@ -12,16 +12,16 @@ function ProjectRow({ projectData }) {
     return (
         <div className="py-4">
             <div className="flex justify-between gap-6">
-                <h3 className="my-auto text-5xl md:text-7xl">{projectData.name}</h3>
+                <h3 className="my-auto w-fit text-4xl md:text-5xl before:content-['↖']">{projectData.name}</h3>
                 <div className="m-auto grow h-px bg-white"></div>
-                <div className="my-auto h-[50px] min-w-[100px]">
-                    <Image src={projectData.imagesrc} width="100" height="50" alt={projectData.name + ' image'} />
+                <div className="my-auto h-[60px] min-w-[120px]">
+                    <Image src={projectData.imagesrc} width="120" height="60" alt={projectData.name + ' image'} />
                 </div>
             </div>
             <div className="flex justify-between gap-6">
-                <h3 className="my-auto text-2xl md:text-3xl">{projectData.client}</h3>
+                <h3 className="my-auto text-2xl md:text-3xl w-auto">{projectData.client}</h3>
                 <div className="m-auto grow h-px bg-white"></div>
-                <h3 className="my-auto text-2xl md:text-3xl">{projectData.year}</h3>
+                <h3 className="my-auto text-2xl md:text-3xl after:content-['↘']">{projectData.year}</h3>
             </div>
         </div>
     );
