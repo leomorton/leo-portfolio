@@ -10,15 +10,19 @@ function shuffleArray(array) {
 
 function ProjectRow({ projectData }) {
     return (
-        <div>
-            <h3>{projectData.name}</h3>
-            <div>
-                <Image src={projectData.imagesrc} width="100" height="50" alt={projectData.name + ' image'} />
+        <div className="py-4">
+            <div className="flex justify-between gap-6">
+                <h3 className="my-auto text-5xl md:text-7xl">{projectData.name}</h3>
+                <div className="m-auto grow h-px bg-white"></div>
+                <div className="my-auto h-[50px] min-w-[100px]">
+                    <Image src={projectData.imagesrc} width="100" height="50" alt={projectData.name + ' image'} />
+                </div>
             </div>
-            <p>~</p>
-            <h3>{projectData.client}</h3>
-            <div></div>
-            <h3>{projectData.year}</h3>
+            <div className="flex justify-between gap-6">
+                <h3 className="my-auto text-2xl md:text-3xl">{projectData.client}</h3>
+                <div className="m-auto grow h-px bg-white"></div>
+                <h3 className="my-auto text-2xl md:text-3xl">{projectData.year}</h3>
+            </div>
         </div>
     );
 }
