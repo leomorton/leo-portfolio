@@ -10,9 +10,9 @@ function shuffleArray(array) {
 
 function ProjectRow({ projectData }) {
     return (
-        <div className="py-4">
+        <div className="py-4 cursor-pointer projectRow">
             <div className="flex justify-between gap-6">
-                <h3 className="my-auto w-fit text-4xl md:text-5xl before:content-['↖']">{projectData.name}</h3>
+                <h3 className="my-auto w-fit text-4xl md:text-5xl">&lt;~ {projectData.name}</h3>
                 <div className="m-auto grow h-px bg-white"></div>
                 <div className="my-auto h-[60px] min-w-[120px]">
                     <Image src={projectData.imagesrc} width="120" height="60" alt={projectData.name + ' image'} />
@@ -21,7 +21,7 @@ function ProjectRow({ projectData }) {
             <div className="flex justify-between gap-6">
                 <h3 className="my-auto text-2xl md:text-3xl w-auto">{projectData.client}</h3>
                 <div className="m-auto grow h-px bg-white"></div>
-                <h3 className="my-auto text-2xl md:text-3xl after:content-['↘']">{projectData.year}</h3>
+                <h3 className="my-auto text-2xl md:text-3xl">{projectData.year} ~&gt;</h3>
             </div>
         </div>
     );
