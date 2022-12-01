@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: JetBrains Mono;
-    src: url(../public/font/JetBrainsMono[wght].ttf);
-}
-
 @layer utilities {
     .font-thin {
         font-variation-settings: 'wght' 100;

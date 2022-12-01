@@ -1,7 +1,9 @@
+'use client';
+
 import Head from 'next/head';
 import Image from 'next/image';
-import TitleBar from '../components/TitleBar';
-import ProjectSection from '../components/ProjectSection';
+import TitleBar from './TitleBar';
+import ProjectSection from './ProjectSection';
 
 const professionalProjects = [
     { key: 1, name: 'PROJECT', client: 'client', imagesrc: '/../public/projects/project1_thumb.png', description: "it's the first project", year: '2020' },
@@ -33,15 +35,9 @@ const personalProjects = [
     { key: 6, name: 'Project P 6', imagesrc: '', description: "it's the sixth personal project" },
 ];
 
-export default function Home() {
+export default function HomePage() {
     return (
         <div className="text-white">
-            <Head>
-                <title>Leo Morton</title>
-                <meta name="description" content="Leo Morton's Portfolio" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <main>
                 <div className="mx-auto max-w-screen-xl px-10">
                     <TitleBar />
