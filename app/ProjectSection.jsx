@@ -1,5 +1,5 @@
-import React from 'react';
-import ProjectRow from './ProjectRow';
+import React from "react";
+import ProjectRow from "./ProjectRow";
 
 function ProjectSection({ sectionTitle, projects }) {
     const rows = [];
@@ -10,7 +10,7 @@ function ProjectSection({ sectionTitle, projects }) {
 
     return (
         <div>
-            <h2 className="text-xl lg:text-2xl">{sectionTitle}</h2>
+            <h2 className="text-xl lg:text-2xl stroke-white stroke-1">{sectionTitle}</h2>
             <div>{rows}</div>
         </div>
     );

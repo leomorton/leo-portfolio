@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function Project1() {
     return (
         <div>
-            <h1>it's a project!</h1>
+            <h1>it&aposs a project!</h1>
         </div>
     );
 }

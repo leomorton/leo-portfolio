@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -16,8 +16,8 @@ function ProjectRow({ projectData }) {
                 <div className="flex justify-between gap-6">
                     <h3 className="my-auto w-fit text-2xl md:text-5xl">&lt;~ {projectData.name}</h3>
                     <div className="m-auto grow h-px bg-white"></div>
-                    <div className="my-auto h-[60px] min-w-[120px]">
-                        <Image src={projectData.imagesrc} width="120" height="60" alt={projectData.name + ' image'} />
+                    <div className="hidden my-auto h-[60px] min-w-[120px] md:flex visible">
+                        <Image src={projectData.imagesrc} width="120" height="60" alt={projectData.name + " image"} />
                     </div>
                 </div>
                 <div className="flex justify-between gap-6">
