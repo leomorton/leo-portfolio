@@ -1,24 +1,23 @@
-import next from "next";
-import React from "react";
 import "../styles/globals.css";
+import TitleBar from "./TitleBar";
 import localFont from "@next/font/local";
 
 const jetbrainsMono = localFont({
     src: "../public/font/JetBrainsMono[wght].ttf",
 });
 
-function RootLayout({
-    // Layouts must accept a children prop.
-    // This will be populated with nested layouts or pages
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={"bg-black " + jetbrainsMono.className}>{children}</body>
+            <head>
+                <title>Leo Morton</title>
+                <meta name="description" content="Leo Morton's Portfolio" />
+                <link rel="icon" href="/favicon.ico" />
+            </head>
+            <body className={"px-10 text-white bg-black " + jetbrainsMono.className}>
+                <TitleBar></TitleBar>
+                {children}
+            </body>
         </html>
     );
 }
-
-export default RootLayout;

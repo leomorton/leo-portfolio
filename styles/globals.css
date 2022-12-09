@@ -37,6 +37,12 @@
     transition: font-variation-settings 0.06s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .projectTitle {
+        font-variation-settings: "wght" 800;
+    }
+}
+
 .projectRow:hover {
     font-variation-settings: "wght" 800;
 }

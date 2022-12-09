@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectRow from "./ProjectRow";
 
 function ProjectSection({ sectionTitle, projects }) {

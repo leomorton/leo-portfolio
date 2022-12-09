@@ -1,8 +1,3 @@
-"use client";
-
-import Head from "next/head";
-import Image from "next/image";
-import TitleBar from "./TitleBar";
 import ProjectSection from "./ProjectSection";
 
 const professionalProjects = [
@@ -35,12 +30,11 @@ const personalProjects = [
     { key: 6, name: "Project P 6", imagesrc: "", description: "it's the sixth personal project" },
 ];
 
-export default function HomePage() {
+export default function Page() {
     return (
-        <div className="text-white">
+        <div>
             <main>
-                <div className="mx-auto max-w-screen-xl px-10">
-                    <TitleBar />
+                <div className="mx-auto max-w-screen-xl">
                     <ProjectSection sectionTitle={"Professional Projects"} projects={professionalProjects} />
                     {/* <ProjectSection sectionTitle={'Personal Projects'} projects={personalProjects} /> */}
                 </div>
