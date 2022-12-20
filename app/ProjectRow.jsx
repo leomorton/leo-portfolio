@@ -3,16 +3,9 @@ import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
 function ProjectRow({ projectData }) {
     return (
-        <Link href="./project">
+        <Link href={`./${projectData.projectId}`}>
             <div className="py-4 cursor-pointer projectRow">
                 <div className="flex justify-between gap-2 md:gap-4">
                     <h3 className="my-auto text-2xl md:text-5xl">&lt;~</h3>
