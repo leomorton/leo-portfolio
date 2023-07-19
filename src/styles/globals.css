@@ -2,7 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://use.typekit.net/maf6gaa.css");
+@font-face {
+  font-family: halogen-light;
+  src: url("https://use.typekit.net/af/e8ded5/00000000000000007735a389/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3");
+}
+
+@font-face {
+  font-family: halogen-light;
+  src: url("https://use.typekit.net/af/e8ded5/00000000000000007735a389/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3");
+}
+
+@font-face {
+  font-family: halogen-regular;
+  src: url("https://use.typekit.net/af/9470e7/00000000000000007735a397/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3");
+}
+
+@font-face {
+  font-family: halogen-bold;
+  src: url("https://use.typekit.net/af/df64f2/00000000000000007735a379/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3");
+}
+
+@font-face {
+  font-family: halogen-black;
+  src: url("https://use.typekit.net/af/e8ded5/00000000000000007735a389/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3");
+}
 
 /* * {
   border: 1px red solid;
