@@ -30,3 +30,33 @@
 /* * {
   border: 1px red solid;
 } */
+
+.dashed {
+  background: linear-gradient(90deg, #333 0%, transparent 0) repeat-x,
+    linear-gradient(90deg, #333 0%, transparent 0) repeat-x,
+    linear-gradient(0deg, #333 0%, transparent 0) repeat-y,
+    linear-gradient(0deg, #333 0%, transparent 0) repeat-y;
+  background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+}
+
+.dashed:hover {
+  animation: animateDash 0.5s infinite linear, showDash 1s forwards ease-in-out;
+}
+
+@keyframes animateDash {
+  100% {
+    background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
+  }
+}
+
+@keyframes showDash {
+  100% {
+    background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+      linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+      linear-gradient(0deg, #333 50%, transparent 0) repeat-y,
+      linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
+    background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+}
