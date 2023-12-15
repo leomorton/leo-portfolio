@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Main from "~/components/main";
 import Content from "~/components/content";
-import Title from "~/components/Title";
+import Title from "~/components/title";
 import CornerBorders from "~/components/cornerBorders";
 
 export default function Home() {
@@ -15,11 +15,19 @@ export default function Home() {
       <Main>
         <Content>
           <Title title="Leo Morton"></Title>
-          <div className="dashed h-12"></div>
           <div className="relative">
             <CornerBorders />
-            <h3 className="whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-sm font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
+            <h3 className="dashed whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-sm font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
               Project 1
+            </h3>
+            <h3 className="dashed whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-sm font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
+              Project 2
+            </h3>
+            <h3 className="dashed whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-sm font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
+              Project 3
+            </h3>
+            <h3 className="dashed whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-sm font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
+              Project 4
             </h3>
           </div>
         </Content>

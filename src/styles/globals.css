@@ -32,16 +32,17 @@
 } */
 
 .dashed {
-  background: linear-gradient(90deg, #333 0%, transparent 0) repeat-x,
-    linear-gradient(90deg, #333 0%, transparent 0) repeat-x,
-    linear-gradient(0deg, #333 0%, transparent 0) repeat-y,
-    linear-gradient(0deg, #333 0%, transparent 0) repeat-y;
+  background: linear-gradient(90deg, rgba(50, 50, 50, 0) 50%, transparent 0)
+      repeat-x,
+    linear-gradient(90deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-x,
+    linear-gradient(0deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-y,
+    linear-gradient(0deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-y;
   background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
   background-position: 0 0, 0 100%, 0 0, 100% 0;
 }
 
 .dashed:hover {
-  animation: animateDash 0.5s infinite linear, showDash 1s forwards ease-in-out;
+  animation: showDash 1s forwards ease-in-out, animateDash 0.5s infinite linear;
 }
 
 @keyframes animateDash {
@@ -52,11 +53,135 @@
 
 @keyframes showDash {
   100% {
-    background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
-      linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
-      linear-gradient(0deg, #333 50%, transparent 0) repeat-y,
-      linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
+    background: linear-gradient(90deg, rgba(50, 50, 50, 1) 50%, transparent 0)
+        repeat-x,
+      linear-gradient(90deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-x,
+      linear-gradient(0deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-y,
+      linear-gradient(0deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-y;
     background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
     background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+}
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 20, 10, 50;
+  --background-end-rgb: 0, 0, 0;
+  --buttonColourMiddle: #850101;
+  --buttonColourEnd: #ffa600;
+  --animTime: 1s;
+  --buttonWidth: 120px;
+  --buttonHeight: 40px;
+}
+
+/* black rectangle used to create main border effect */
+.buttonBorder,
+.buttonBlur {
+  background: black;
+  border-radius: 0.2rem;
+  position: absolute;
+  padding: 0.2em 1em;
+  /* transform: translate(-50%, -50%); */
+}
+
+/* gradient text which achieves the effect by mask out a gradient, using the text */
+.buttonText {
+  background: linear-gradient(
+    -180deg,
+    transparent,
+    var(--buttonColourMiddle),
+    var(--buttonColourEnd)
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  color: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: textAnim;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  width: fit-content;
+  margin: auto;
+}
+
+/* gradient used to create main border effect */
+.buttonBorder::after,
+.buttonBlur::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+    -180deg,
+    var(--buttonColourMiddle),
+    var(--buttonColourEnd)
+  );
+  background-size: 400% 400%;
+  animation: borderAnim var(--animTime) ease infinite;
+  border-radius: inherit;
+}
+
+/* blurred border thickness */
+.buttonBlur::after {
+  inset: -5px;
+}
+
+/* unblurred border thickness */
+.buttonBorder::after {
+  inset: -2px;
+}
+
+/* wraps the buttonBlur and does the blurring */
+.buttonBlurWrapper {
+  filter: blur(8px);
+  transform: translate3d(0, 100%, 0);
+  /* this time it's necessary for the blur not to be clipped oddly. perhaps something to do with stacking contexts */
+}
+
+/* wraps the buttonBorder and applies blending to stop the black rectangle occluding the glow below */
+.buttonBorderWrapper {
+  mix-blend-mode: screen;
+}
+
+.glowButton {
+  cursor: pointer;
+}
+
+/* need to make sure the black rect is in the same stacking context as the
+as the gradient background/outline so that the blend mode can be applied
+correctly. It works in Chrome just */
+
+@keyframes borderAnim {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  70% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    background-position: 0% 20%;
+  }
+  20% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  70% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 20%;
   }
 }
