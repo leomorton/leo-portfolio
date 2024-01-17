@@ -17,7 +17,7 @@ export default function Home() {
           <QuarterSpinner />
           <Title title="Leo Morton"></Title>
           <p className="text-center font-halogenRegular text-sm sm:text-base">
-            Web Zone Under construction...
+            Full WebZone Under construction...
           </p>
           <a
             className="relative cursor-pointer"
