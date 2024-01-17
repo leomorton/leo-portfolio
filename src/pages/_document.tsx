@@ -10,6 +10,7 @@ export default function Document() {
         ></link>
         <link rel="icon" href="/favicon.png" />
         <meta name="author" content="Leo Morton" />
+        <meta name="theme-color" content="#e0e0e0" />
       </Head>
       <body>
         <Main />
