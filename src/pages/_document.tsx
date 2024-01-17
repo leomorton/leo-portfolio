@@ -8,6 +8,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://use.typekit.net/maf6gaa.css"
         ></link>
+        <link rel="icon" href="/favicon.png" />
         <meta name="author" content="Leo Morton" />
       </Head>
       <body>

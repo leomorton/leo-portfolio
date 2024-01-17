@@ -1,5 +1,5 @@
 import React from "react";
-import GlowButton from "~/components/GlowButton";
+import GlowButton from "~/components/glowButton";
 
 const Experiments = () => {
   return (
