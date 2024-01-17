@@ -73,6 +73,8 @@
   --buttonHeight: 40px;
 }
 
+/* start of button experiment */
+
 /* black rectangle used to create main border effect */
 .buttonBorder,
 .buttonBlur {
@@ -183,5 +185,38 @@ correctly. It works in Chrome just */
   }
   100% {
     background-position: 0% 20%;
+  }
+}
+
+/* end of button experiment */
+
+.quarterSpinner {
+  background-image: conic-gradient(
+    #ffffff00 0turn,
+    #ffffff00 0.25turn,
+    #000000bb 0.25turn,
+    #000000bb 0.5turn,
+    #ffffff00 0.5turn,
+    #ffffff00 0.75turn,
+    #000000bb 0.75turn
+  );
+  background-size: 100% 100%;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
