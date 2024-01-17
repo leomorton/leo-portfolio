@@ -3,6 +3,7 @@ import Main from "~/components/main";
 import Content from "~/components/content";
 import Title from "~/components/title";
 import CornerBorders from "~/components/cornerBorders";
+import QuarterSpinner from "~/components/quarterSpinner";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       </Head>
       <Main>
         <Content>
+          <QuarterSpinner />
           <Title title="Leo Morton"></Title>
-          <p className="text-md text-center font-halogenRegular">
+          <p className="text-center font-halogenRegular text-sm sm:text-base">
             Web Zone Under construction...
           </p>
           <a
@@ -28,7 +30,7 @@ export default function Home() {
               PDF Portfolio
             </h3>
           </a>
-          <p className="text-md text-center font-halogenRegular">
+          <p className="text-center font-halogenRegular text-sm sm:text-base">
             Thanks for stopping by, have a productive day
           </p>
         </Content>
