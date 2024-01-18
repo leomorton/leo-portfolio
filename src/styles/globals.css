@@ -37,7 +37,7 @@
     linear-gradient(90deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-x,
     linear-gradient(0deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-y,
     linear-gradient(0deg, rgba(50, 50, 50, 0) 50%, transparent 0) repeat-y;
-  background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
+  background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
   background-position: 0 0, 0 100%, 0 0, 100% 0;
 }
 
@@ -47,7 +47,7 @@
 
 @keyframes animateDash {
   100% {
-    background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
+    background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
   }
 }
 
@@ -58,7 +58,7 @@
       linear-gradient(90deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-x,
       linear-gradient(0deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-y,
       linear-gradient(0deg, rgba(50, 50, 50, 1) 50%, transparent 0) repeat-y;
-    background-size: 4px 2px, 4px 2px, 2px 4px, 2px 4px;
+    background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
     background-position: 0 0, 0 100%, 0 0, 100% 0;
   }
 }
