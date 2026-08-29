@@ -18,6 +18,12 @@ export default function Home() {
               Project 1
             </h3>
           </Link>
+          <Link className="relative cursor-pointer" href="/experiments/">
+            <CornerBorders />
+            <h3 className="dashed whitespace-nowrap px-[3vw] py-[2vw] font-halogenRegular text-lg font-medium leading-none text-neutral-700 sm:py-[1vw] sm:text-xl md:text-3xl">
+              Experiments
+            </h3>
+          </Link>
           <p className="text-center font-halogenRegular text-sm sm:text-base">
             Thanks for stopping by, have a productive day
           </p>
